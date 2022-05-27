@@ -1,0 +1,69 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --no-color run --machine --track-widget-creation --device-id=edge --start-paused --dart-define=flutter.inspector.structuredErrors=true --devtools-server-address=http://127.0.0.1:9100 lib\main.dart
+
+## exception
+
+StateError: Bad state: No context with the running Dart application.
+
+```
+#0      RemoteDebuggerExecutionContext.id (package:dwds/src/debugging/execution_context.dart:47:7)
+<asynchronous suspension>
+#1      AppInspector._getExtensionRpcs (package:dwds/src/debugging/inspector.dart:486:20)
+<asynchronous suspension>
+#2      AppInspector._initialize (package:dwds/src/debugging/inspector.dart:93:34)
+<asynchronous suspension>
+#3      AppInspector.initialize (package:dwds/src/debugging/inspector.dart:156:5)
+<asynchronous suspension>
+#4      ChromeProxyService.createIsolate (package:dwds/src/services/chrome_proxy_service.dart:188:18)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 2.0.2, on Microsoft Windows [Version 10.0.19044.1586], locale en-US)
+    • Flutter version 2.0.2 at C:\src\flutter
+    • Framework revision 8962f6dc68 (1 year ago), 2021-03-11 13:22:20 -0800
+    • Engine revision 5d8bf811b3
+    • Dart version 2.12.1
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 30.0.3)
+    • Android SDK at C:\Users\lenovo\AppData\Local\Android\sdk
+    • Platform android-30, build-tools 30.0.3
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b01)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+
+[✓] Android Studio (version 4.1.0)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b01)
+
+[✓] IntelliJ IDEA Community Edition (version 2021.2)
+    • IntelliJ at C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.1
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin version 212.5080.8
+
+[✓] VS Code (version 1.64.2)
+    • VS Code at C:\Users\lenovo\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.36.0
+
+[✓] Connected device (4 available)
+    • STK L21 (mobile)            • XMJVB20317002436 • android-arm64  • Android 10 (API 29)
+    • sdk gphone x86 arm (mobile) • emulator-5554    • android-x86    • Android 11 (API 30) (emulator)
+    • Chrome (web)                • chrome           • web-javascript • Google Chrome 99.0.4844.51
+    • Edge (web)                  • edge             • web-javascript • Microsoft Edge 99.0.1150.39
+
+• No issues found!
+```
